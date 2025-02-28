@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище databaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Area">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="House">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Index">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaterialType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="MaterialType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PercentWithoutMistakes" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Partner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="PartnerTypeId" Type="int" Nullable="false" />
+    <Property Name="PartnerNameId" Type="int" Nullable="false" />
+    <Property Name="DirectorLastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DirectorFirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DirectorMiddleName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartnerPhone" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartnerAdressId" Type="int" Nullable="false" />
+    <Property Name="INN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Rating" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PartnerAdress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IndexId" Type="int" Nullable="false" />
+    <Property Name="AreaId" Type="int" Nullable="false" />
+    <Property Name="CityId" Type="int" Nullable="false" />
+    <Property Name="StreetId" Type="int" Nullable="false" />
+    <Property Name="HouseId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PartnerName">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PartnerProducts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="PartnerNameId" Type="int" Nullable="false" />
+    <Property Name="ProductAmount" Type="int" Nullable="false" />
+    <Property Name="SellDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PartnerType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProductTypeId" Type="int" Nullable="false" />
+    <Property Name="PartnerProductsId" Type="int" Nullable="false" />
+    <Property Name="Article" Type="int" Nullable="false" />
+    <Property Name="MinCostForPartner" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Percent" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Street">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Partner_PartnerAdress">
+    <End Role="PartnerAdress" Type="Self.PartnerAdress" Multiplicity="1" />
+    <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartnerAdress">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Partner">
+        <PropertyRef Name="PartnerAdressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Partner_PartnerName">
+    <End Role="PartnerName" Type="Self.PartnerName" Multiplicity="1" />
+    <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartnerName">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Partner">
+        <PropertyRef Name="PartnerNameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Partner_PartnerType">
+    <End Role="PartnerType" Type="Self.PartnerType" Multiplicity="1" />
+    <End Role="Partner" Type="Self.Partner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartnerType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Partner">
+        <PropertyRef Name="PartnerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartnerAdress_Area">
+    <End Role="Area" Type="Self.Area" Multiplicity="1" />
+    <End Role="PartnerAdress" Type="Self.PartnerAdress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Area">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PartnerAdress">
+        <PropertyRef Name="AreaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartnerAdress_City">
+    <End Role="City" Type="Self.City" Multiplicity="1" />
+    <End Role="PartnerAdress" Type="Self.PartnerAdress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PartnerAdress">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartnerAdress_House">
+    <End Role="House" Type="Self.House" Multiplicity="1" />
+    <End Role="PartnerAdress" Type="Self.PartnerAdress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="House">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PartnerAdress">
+        <PropertyRef Name="HouseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartnerAdress_Index">
+    <End Role="Index" Type="Self.Index" Multiplicity="1" />
+    <End Role="PartnerAdress" Type="Self.PartnerAdress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Index">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PartnerAdress">
+        <PropertyRef Name="IndexId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartnerAdress_Street">
+    <End Role="Street" Type="Self.Street" Multiplicity="1" />
+    <End Role="PartnerAdress" Type="Self.PartnerAdress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Street">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PartnerAdress">
+        <PropertyRef Name="StreetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartnerProducts_PartnerName">
+    <End Role="PartnerName" Type="Self.PartnerName" Multiplicity="1" />
+    <End Role="PartnerProducts" Type="Self.PartnerProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartnerName">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PartnerProducts">
+        <PropertyRef Name="PartnerNameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_PartnerProducts">
+    <End Role="PartnerProducts" Type="Self.PartnerProducts" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartnerProducts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="PartnerProductsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_ProductType">
+    <End Role="ProductType" Type="Self.ProductType" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="ProductTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище databaseModelContainer">
+    <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="House" EntityType="Self.House" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Index" EntityType="Self.Index" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaterialType" EntityType="Self.MaterialType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Partner" EntityType="Self.Partner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PartnerAdress" EntityType="Self.PartnerAdress" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PartnerName" EntityType="Self.PartnerName" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PartnerProducts" EntityType="Self.PartnerProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PartnerType" EntityType="Self.PartnerType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductType" EntityType="Self.ProductType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Street" EntityType="Self.Street" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Partner_PartnerAdress" Association="Self.FK_Partner_PartnerAdress">
+      <End Role="PartnerAdress" EntitySet="PartnerAdress" />
+      <End Role="Partner" EntitySet="Partner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Partner_PartnerName" Association="Self.FK_Partner_PartnerName">
+      <End Role="PartnerName" EntitySet="PartnerName" />
+      <End Role="Partner" EntitySet="Partner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Partner_PartnerType" Association="Self.FK_Partner_PartnerType">
+      <End Role="PartnerType" EntitySet="PartnerType" />
+      <End Role="Partner" EntitySet="Partner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartnerAdress_Area" Association="Self.FK_PartnerAdress_Area">
+      <End Role="Area" EntitySet="Area" />
+      <End Role="PartnerAdress" EntitySet="PartnerAdress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartnerAdress_City" Association="Self.FK_PartnerAdress_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="PartnerAdress" EntitySet="PartnerAdress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartnerAdress_House" Association="Self.FK_PartnerAdress_House">
+      <End Role="House" EntitySet="House" />
+      <End Role="PartnerAdress" EntitySet="PartnerAdress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartnerAdress_Index" Association="Self.FK_PartnerAdress_Index">
+      <End Role="Index" EntitySet="Index" />
+      <End Role="PartnerAdress" EntitySet="PartnerAdress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartnerAdress_Street" Association="Self.FK_PartnerAdress_Street">
+      <End Role="Street" EntitySet="Street" />
+      <End Role="PartnerAdress" EntitySet="PartnerAdress" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartnerProducts_PartnerName" Association="Self.FK_PartnerProducts_PartnerName">
+      <End Role="PartnerName" EntitySet="PartnerName" />
+      <End Role="PartnerProducts" EntitySet="PartnerProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_PartnerProducts" Association="Self.FK_Products_PartnerProducts">
+      <End Role="PartnerProducts" EntitySet="PartnerProducts" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_ProductType" Association="Self.FK_Products_ProductType">
+      <End Role="ProductType" EntitySet="ProductType" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

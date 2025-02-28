@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\comcuru\\Desktop\\ISP431-AndreevaSophia\\MasterFloorApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|c:\\users\\comcuru\\desktop\\isp431-andreevasophia\\masterfloorapp\\masterfloorapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|solutionrelative:masterfloorapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\comcuru\\Desktop\\ISP431-AndreevaSophia\\MasterFloorApp\\MasterFloorApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MasterFloorApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\comcuru\\Desktop\\ISP431-AndreevaSophia\\MasterFloorApp\\MasterFloorApp\\MainWindow.xaml",
+              "RelativeToolTip": "MasterFloorApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-28T11:38:48.929Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
