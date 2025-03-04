@@ -11,5 +11,6 @@ namespace MasterFloorApp.Classes
     class Manager
     {
         public static Frame MainFrame { get; set; }
+        public static Data.Partner CurrentPartner { get; set; }
     }
 }

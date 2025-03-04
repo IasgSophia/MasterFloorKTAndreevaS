@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\comcuru\\Desktop\\ISP431-AndreevaSophia\\MasterFloorApp\\",
+  "WorkspaceRootPath": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|c:\\users\\comcuru\\desktop\\isp431-andreevasophia\\masterfloorapp\\masterfloorapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|c:\\users\\comcuru\\desktop\\masterfloorktandreevas\\masterfloorapp\\masterfloorapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|solutionrelative:masterfloorapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|c:\\users\\comcuru\\desktop\\masterfloorktandreevas\\masterfloorapp\\masterfloorapp\\pages\\partnerviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|solutionrelative:masterfloorapp\\pages\\partnerviewpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|c:\\users\\comcuru\\desktop\\masterfloorktandreevas\\masterfloorapp\\masterfloorapp\\pages\\partnerviewpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|solutionrelative:masterfloorapp\\pages\\partnerviewpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|c:\\users\\comcuru\\desktop\\masterfloorktandreevas\\masterfloorapp\\masterfloorapp\\pages\\addeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BFE680E-9720-4D1F-8E67-75DBB73772DB}|MasterFloorApp\\MasterFloorApp.csproj|solutionrelative:masterfloorapp\\pages\\addeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,12 +32,50 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\comcuru\\Desktop\\ISP431-AndreevaSophia\\MasterFloorApp\\MasterFloorApp\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MasterFloorApp\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\comcuru\\Desktop\\ISP431-AndreevaSophia\\MasterFloorApp\\MasterFloorApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\MainWindow.xaml",
               "RelativeToolTip": "MasterFloorApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-28T11:38:48.929Z",
+              "WhenOpened": "2025-03-04T09:27:11.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PartnerViewPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\Pages\\PartnerViewPage.xaml.cs",
+              "RelativeDocumentMoniker": "MasterFloorApp\\Pages\\PartnerViewPage.xaml.cs",
+              "ToolTip": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\Pages\\PartnerViewPage.xaml.cs",
+              "RelativeToolTip": "MasterFloorApp\\Pages\\PartnerViewPage.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T09:26:00.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PartnerViewPage.xaml",
+              "DocumentMoniker": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\Pages\\PartnerViewPage.xaml",
+              "RelativeDocumentMoniker": "MasterFloorApp\\Pages\\PartnerViewPage.xaml",
+              "ToolTip": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\Pages\\PartnerViewPage.xaml",
+              "RelativeToolTip": "MasterFloorApp\\Pages\\PartnerViewPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-04T09:25:11.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pages\\AddEditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\Pages\\AddEditPage.xaml.cs",
+              "RelativeDocumentMoniker": "MasterFloorApp\\Pages\\AddEditPage.xaml.cs",
+              "ToolTip": "C:\\Users\\comcuru\\Desktop\\MasterFloorKTAndreevaS\\MasterFloorApp\\MasterFloorApp\\Pages\\AddEditPage.xaml.cs",
+              "RelativeToolTip": "MasterFloorApp\\Pages\\AddEditPage.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T08:26:09.552Z",
               "EditorCaption": ""
             }
           ]

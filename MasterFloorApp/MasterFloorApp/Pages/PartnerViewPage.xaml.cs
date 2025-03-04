@@ -23,6 +23,24 @@ namespace MasterFloorApp.Pages
         public PartnerViewPage()
         {
             InitializeComponent();
+            Init();
+        }
+        public void Init()
+        {
+            PartnerListView.ItemsSource = Data.databaseEntities.GetContext().Partner.ToList();
+
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage(null));
+            Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage());
+        }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage(sender as Button).DataContext as Data.Partner);
+            Classes.Manager.MainFrame.Navigate(new Pages.AddEditPage());
         }
     }
 }
